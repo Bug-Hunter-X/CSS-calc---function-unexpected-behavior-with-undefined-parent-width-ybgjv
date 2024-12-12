@@ -1,0 +1,10 @@
+The following CSS code snippet causes an unexpected behavior in certain browsers:
+
+```css
+div {
+  width: calc(50% - 10px);
+  background-color: lightblue;
+}
+```
+
+This calculation might lead to unexpected results if the parent element doesn't have a defined width.  The `calc()` function depends on the parent's dimensions, and if it's not specified, the calculation fails to give the expected outcome. 
