@@ -1,0 +1,15 @@
+To resolve this issue, ensure that the parent element has a defined width. Here's how you can modify the CSS:
+
+```css
+/* Define the width of the parent element */
+div.parent {
+  width: 80%; /* or any suitable value */
+}
+
+div.child {
+  width: calc(50% - 10px);
+  background-color: lightblue;
+}
+```
+
+By setting the width of the parent `.parent` container, we provide the `calc()` function within the child element `.child` with a stable base for its calculation, preventing unexpected outcomes.
